@@ -3,12 +3,14 @@ Dicussion Week 2
 
 Welcome back to the second week of discussions!
 
-This week, we'll be working on adding Javascript/jQuery to make our music widget a bit more exciting, and actually play music. The goal of this week's lab is to hopefully make Javascript/jQuery a language that you're more comfortable with, because many of the projects will be using it to make their pages interactive.
+This week we'll be working on adding Javascript/jQuery to make our music widget a bit more exciting and actually play music. The goal of this week's lab is to hopefully make Javascript/jQuery a language that you're more comfortable with because many of the projects will be using it to make their pages interactive.
 
 If you're stuck at any point, feel free to ask your GSI, or consult these resources:
 
 Something from Mozilla
+
 jQuery document
+
 Stackoverflow
 
 Tools
@@ -21,7 +23,7 @@ To use the console.log function, just insert it anywhere in your code, like so:
 ``` javascript
 >>> var hello = 5;
 >>> console.log(hello);
->>> 5
+5
 ```
 
 To use the debugger, merely insert the debugger anywhere in your code, like so:
@@ -43,7 +45,7 @@ git clone https://github.com/cs169fa2015/dis2
 cd dis2
 ```
 
-If you open index.html in the browser, you'll soon see that the widget has gotten a bit of an upgrade! We've used a submission from the DevWars website and taken the styling so that you don't have to worry about it. You can check out index.css if you're interested as to how this submission styled the widget.
+If you open index.html in the browser, you'll see that the widget has gotten a bit of an upgrade! We've used a submission from the DevWars website and taken the styling so that you don't have to worry about it. You can check out index.css if you're interested as to how this submission styled the widget.
 
 We'll only be working with index.js.
 
@@ -60,7 +62,7 @@ The code
 $(document).ready(function() { onLoad() });
 ```
 
-runs the `onLoad()` function as soon as the document is finished loaded. This is important because we are never sure when the entire HTML document is rendered, so if we run the javascript code too early some of the elements on the page might not even exist yet (which would lead to alot of problems if you were to, say, change the text of some nonexistent title).
+runs the `onLoad()` function as soon as the document is finished loaded. The `ready` method is important because we are never sure when the entire HTML document is rendered, so if we run the javascript code too early some of the elements on the page might not even exist yet (which would lead to a lot of problems if you were to, say, change the text of some nonexistent title).
 
 Most of your work will be in the onLoad() method, where we've started some things for you. We'll be working primarily with the HTML audio element, which you can find more about here _______.
 

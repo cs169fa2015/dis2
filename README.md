@@ -64,7 +64,7 @@ $(document).ready(function() { onLoad() });
 
 runs the `onLoad()` function as soon as the document is finished loaded. The `ready` method is important because we are never sure when the entire HTML document is rendered, so if we run the javascript code too early some of the elements on the page might not even exist yet (which would lead to a lot of problems if you were to, say, change the text of some nonexistent title).
 
-Most of your work will be in the onLoad() method, where we've started some things for you. We'll be working primarily with the HTML audio element, which you can find more about here _______.
+Most of your work will be in the onLoad() method, where we've started some things for you. We'll be working primarily with the HTML audio element, which you can find more about [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio).
 
 To save time:
 

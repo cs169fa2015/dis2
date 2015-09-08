@@ -37,20 +37,21 @@ function round(number, sig) {
 }
 
 /*
-  Gets the percent of music played so far.
+  Gets the timestring of music played so far.
 
   Arguments: track (audio element)
-  Returns: Percent (float)
+  Returns: Time (String)
 */
 function getTimePlayed(track) {
   /* YOUR CODE HERE */
 }
 
+
 /*
-  Gets the percent of music played so far.
+  Gets the timestring of music left to play.
 
   Arguments: track (audio element)
-  Returns: Percent (float)
+  Returns: Time (String)
 */
 function getTimeLeft(track) {
   /* YOUR CODE HERE */

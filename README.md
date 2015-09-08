@@ -84,7 +84,7 @@ Part 2
 
 Now that our music widget actually plays music, we want to be able to track the progress of the music as it plays! Right now our music widget displays the time '00:00' no matter where in the song we are. Let's make it so that when the song plays, the time updates correctly. We also want the ending timer to display the time left in the song (currently it displays 00:00).
 
-A quick hint: Start by implementing the `getTimeString()` methods, and then using it to write `getTimePlayed()` and `getTimeLeft()`.
+A quick hint: Start by implementing `getTimePlayed()` and `getTimeLeft()`.
 
 Part 3
 ---

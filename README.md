@@ -98,7 +98,7 @@ Part 4
 
 Finally, a working music player....almost. After the song finishes, we want to reset the player so the entire widget can be played again!
 
-Implement the `reset()` method so that it:
+Implement the `resetPlayer()` method so that it:
 
 - Resets the values of `.time-current` and `.time-left` to their original values.
 - Resets the audio

@@ -7,11 +7,11 @@ This week we'll be working on adding Javascript/jQuery to make our music widget 
 
 If you're stuck at any point, feel free to ask your GSI, or consult these resources:
 
-Something from Mozilla
+- [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-jQuery document
+- [jQUery Documentation](http://api.jquery.com/)
 
-Stackoverflow
+- Google
 
 Tools
 ---

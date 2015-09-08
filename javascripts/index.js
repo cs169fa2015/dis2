@@ -27,16 +27,6 @@ function getPercentPlayed(track) {
 }
 
 /*
-  Rounds number to sig
-
-  Arguments: number (float), sig(int)
-  Returns: number (float)
-*/
-function round(number, sig) {
-  return parseFloat(number.toFixed(sig));
-}
-
-/*
   Gets the timestring of music played so far.
 
   Arguments: track (audio element)

@@ -1,0 +1,117 @@
+/*
+  Plays track.
+
+  Arguments: track (audio element)
+*/
+function play(track) {
+  track.play();
+}
+
+/*
+  Pauses the track.
+
+  Arguments: track (audio element)
+*/
+function pause(track) {
+  track.pause();
+}
+
+/*
+  Gets the percent of music played so far.
+
+  Arguments: track (audio element)
+  Returns: Percent (float)
+*/
+function getPercentPlayed(track) {
+  /* YOUR CODE HERE */
+}
+
+/*
+  Rounds number to sig
+
+  Arguments: number (float), sig(int)
+  Returns: number (float)
+*/
+function round(number, sig) {
+  return parseFloat(number.toFixed(sig));
+}
+
+/*
+  Gets the percent of music played so far.
+
+  Arguments: track (audio element)
+  Returns: Percent (float)
+*/
+function getTimePlayed(track) {
+  /* YOUR CODE HERE */
+}
+
+/*
+  Gets the percent of music played so far.
+
+  Arguments: track (audio element)
+  Returns: Percent (float)
+*/
+function getTimeLeft(track) {
+  /* YOUR CODE HERE */
+}
+
+/*
+  Function helper that turns time (in seconds) into a human readable string.
+
+  Arguments: Seconds (int)
+  Returns: Human readable string (string).
+
+  Ex: getTimeString(601) => "10:01"
+*/
+function getTimeString(time) {
+  var seconds = time % 60;
+  if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
+  var minutes = parseInt(time / 60);
+  return minutes + ":" + seconds;
+}
+
+/*
+  Function that is called every second.
+  Do your music updating here!
+*/
+function updateTime(track, timer) {
+   /* YOUR CODE HERE */
+
+  if ($(".time-current").html() == getTimeString(parseInt(track.duration))) {
+    resetPlayer(track, timer);
+  }
+}
+
+/*
+  Resets the player.
+*/
+function resetPlayer(track, timer) {
+  /* YOUR CODE HERE */
+}
+
+function onLoad() {
+  var track = document.getElementById("track");
+  var timer;
+  track.volume = 0.1;
+
+  $(track).on('loadedmetadata', function() {
+    /* YOUR CODE HERE */
+
+    $(".play").click(function() {
+      if($(this).hasClass("active")) {
+        /* YOUR CODE HERE */
+        timer = setInterval(function() { updateTime(track, timer); }, 1000);
+      } else {
+        /* YOUR CODE HERE */
+        clearInterval(timer);
+      }
+    });
+
+    $(".time-left").text(getTimeString(parseInt(track.duration)));
+  });
+}
+
+$(document).ready(function() { onLoad() });

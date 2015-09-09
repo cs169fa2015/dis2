@@ -50,12 +50,13 @@ function getTimeLeft(track) {
 /*
   Function helper that turns time (in seconds) into a human readable string.
 
-  Arguments: Seconds (int)
+  Arguments: Seconds (float)
   Returns: Human readable string (string).
 
   Ex: getTimeString(601) => "10:01"
 */
 function getTimeString(time) {
+  time = parseInt(time);
   var seconds = time % 60;
   if (seconds < 10) {
     seconds = "0" + seconds;
@@ -94,10 +95,10 @@ function onLoad() {
     $(".play").click(function() {
       if($(this).hasClass("active")) {
         /* YOUR CODE HERE */
-        timer = setInterval(function() { updateTime(track, timer); }, 1000);
+        clearInterval(timer);
       } else {
         /* YOUR CODE HERE */
-        clearInterval(timer);
+        timer = setInterval(function() { updateTime(track, timer); }, 1000);
       }
     });
 
